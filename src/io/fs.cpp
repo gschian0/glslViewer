@@ -64,7 +64,7 @@ std::string getAbsPath(const std::string& _path) {
 }
 
 std::string urlResolve(const std::string& _path, const std::string& _pwd, const List &_include_folders) {
-    std::string url = _pwd +'\\'+ _path;
+    std::string url = _pwd +'/'+ _path;
 
     // If the path is not in the same directory
     if (urlExists(url)) 
@@ -73,7 +73,7 @@ std::string urlResolve(const std::string& _path, const std::string& _pwd, const 
     // .. search on the include path
     else {
         for ( uint32_t i = 0; i < _include_folders.size(); i++) {
-            std::string new_path = _include_folders[i] + "\\" + _path;
+            std::string new_path = _include_folders[i] + "/" + _path;
             if (urlExists(new_path)) 
                 return realpath(new_path.c_str(), NULL);
         }
