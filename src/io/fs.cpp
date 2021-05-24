@@ -74,9 +74,12 @@ std::string urlResolve(const std::string& _path, const std::string& _pwd, const 
     else {
         for ( uint32_t i = 0; i < _include_folders.size(); i++) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             std::string new_path = _include_folders[i] + "\\" + _path;
             if (urlExists(new_path))
 =======
+=======
+>>>>>>> parent of 514f958 (test)
             std::string new_path = _include_folders[i] + "/" + _path;
             if (urlExists(new_path)) 
 >>>>>>> parent of 514f958 (test)
