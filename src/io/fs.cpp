@@ -36,9 +36,9 @@ std::string getBaseDir(const std::string& filepath) {
 
     if (filepath.find_last_of("/\\") != std::string::npos)
         base_dir =  filepath.substr(0, filepath.find_last_of("/\\"));
-    else 
+    else
         base_dir = ".";
-    
+
 #ifdef PLATFORM_WIN32
     base_dir += "\\";
 #else
@@ -53,7 +53,7 @@ const char* realpath(const char* str, void*)
 {
     return str;
 }
-#endif 
+#endif
 std::string getAbsPath(const std::string& _path) {
     const char * real_path = realpath(_path.c_str(), NULL);
     std::string abs_path(real_path);
@@ -64,17 +64,17 @@ std::string getAbsPath(const std::string& _path) {
 }
 
 std::string urlResolve(const std::string& _path, const std::string& _pwd, const List &_include_folders) {
-    std::string url = _pwd +'/'+ _path;
+    std::string url = _pwd +'\\'+ _path;
 
     // If the path is not in the same directory
-    if (urlExists(url)) 
+    if (urlExists(url))
         return realpath(url.c_str(), NULL);
 
     // .. search on the include path
     else {
         for ( uint32_t i = 0; i < _include_folders.size(); i++) {
-            std::string new_path = _include_folders[i] + "/" + _path;
-            if (urlExists(new_path)) 
+            std::string new_path = _include_folders[i] + "\\" + _path;
+            if (urlExists(new_path))
                 return realpath(new_path.c_str(), NULL);
         }
         return _path;
@@ -108,7 +108,7 @@ bool loadFromPath(const std::string &_path, std::string *_into, const std::vecto
     file.open(_path.c_str());
 
     // Skip if it's already open
-    if (!file.is_open()) 
+    if (!file.is_open())
         return false;
 
     // Get absolute home folder
