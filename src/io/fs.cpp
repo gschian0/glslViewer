@@ -93,6 +93,8 @@ std::string urlResolve(const std::string& _path, const std::string& _pwd, const 
 =======
             std::string new_path = _include_folders[i] + "/" + _path;
 >>>>>>> parent of 514f958 (test)
+=======
+>>>>>>> parent of 8fd4613 (Revert "test2")
             if (urlExists(new_path)) 
 >>>>>>> parent of 514f958 (test)
                 return realpath(new_path.c_str(), NULL);
