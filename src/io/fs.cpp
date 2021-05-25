@@ -74,9 +74,12 @@ std::string urlResolve(const std::string& _path, const std::string& _pwd, const 
     std::string url = _pwd +'\\'+ _path;
 =======
 >>>>>>> parent of 514f958 (test)
+<<<<<<< HEAD
 =======
     std::string url = _pwd +'\\'+ _path;
 >>>>>>> parent of 8fd4613 (Revert "test2")
+=======
+>>>>>>> parent of 964d151 (t2)
 
     // If the path is not in the same directory
     if (urlExists(url))
@@ -104,7 +107,6 @@ std::string urlResolve(const std::string& _path, const std::string& _pwd, const 
             std::string new_path = _include_folders[i] + "/" + _path;
 >>>>>>> parent of 514f958 (test)
 =======
-            std::string new_path = _include_folders[i] + "\\" + _path;
 >>>>>>> parent of 8fd4613 (Revert "test2")
 =======
             std::string new_path = _include_folders[i] + "/" + _path;
