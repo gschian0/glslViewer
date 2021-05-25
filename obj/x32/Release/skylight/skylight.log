@@ -1,3 +1,0 @@
-﻿  ArHosekSkyModel.cc
-C:\Users\GennaroSchiano\Documents\GitHub\glslViewer\include\skylight\ArHosekSkyModel.cc(526,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-  skylight.vcxproj -> C:\Users\GennaroSchiano\Documents\GitHub\glslViewer\bin\x32\Release\skylight.lib
