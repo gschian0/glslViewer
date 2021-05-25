@@ -64,90 +64,16 @@ std::string getAbsPath(const std::string& _path) {
 }
 
 std::string urlResolve(const std::string& _path, const std::string& _pwd, const List &_include_folders) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    std::string url = _pwd +'/'+ _path;
-<<<<<<< HEAD
-<<<<<<< HEAD
     std::string url = _pwd +'\\'+ _path;
-=======
->>>>>>> parent of 514f958 (test)
-    std::string url = _pwd +'\\'+ _path;
-=======
->>>>>>> parent of 514f958 (test)
-<<<<<<< HEAD
-=======
-    std::string url = _pwd +'\\'+ _path;
->>>>>>> parent of 8fd4613 (Revert "test2")
-=======
->>>>>>> parent of 964d151 (t2)
-=======
-    std::string url = _pwd +'/'+ _path;
->>>>>>> parent of 514f958 (test)
-=======
-    std::string url = _pwd +'/'+ _path;
->>>>>>> parent of 514f958 (test)
-=======
-    std::string url = _pwd +'\\'+ _path;
->>>>>>> parent of 8fd4613 (Revert "test2")
-=======
-    std::string url = _pwd +'/'+ _path;
->>>>>>> parent of 514f958 (test)
-
     // If the path is not in the same directory
     if (urlExists(url))
         return realpath(url.c_str(), NULL);
-
     // .. search on the include path
     else {
         for ( uint32_t i = 0; i < _include_folders.size(); i++) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             std::string new_path = _include_folders[i] + "\\" + _path;
             if (urlExists(new_path))
-=======
-=======
->>>>>>> parent of 514f958 (test)
-            std::string new_path = _include_folders[i] + "/" + _path;
-=======
-            std::string new_path = _include_folders[i] + "\\" + _path;
->>>>>>> parent of d0b6f54 (lygia includes working)
-=======
-            std::string new_path = _include_folders[i] + "/" + _path;
->>>>>>> parent of 514f958 (test)
-=======
->>>>>>> parent of 8fd4613 (Revert "test2")
-=======
-            std::string new_path = _include_folders[i] + "/" + _path;
->>>>>>> parent of 514f958 (test)
-=======
-            std::string new_path = _include_folders[i] + "\\" + _path;
->>>>>>> parent of 8fd4613 (Revert "test2")
-=======
-            std::string new_path = _include_folders[i] + "/" + _path;
->>>>>>> parent of 514f958 (test)
-=======
-            std::string new_path = _include_folders[i] + "/" + _path;
->>>>>>> parent of 514f958 (test)
-=======
-            std::string new_path = _include_folders[i] + "\\" + _path;
->>>>>>> parent of 8fd4613 (Revert "test2")
-=======
-            std::string new_path = _include_folders[i] + "/" + _path;
->>>>>>> parent of 514f958 (test)
-            if (urlExists(new_path)) 
->>>>>>> parent of 514f958 (test)
                 return realpath(new_path.c_str(), NULL);
         }
         return _path;
